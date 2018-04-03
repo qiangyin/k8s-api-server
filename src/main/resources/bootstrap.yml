@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      label: master
+      profile: dev
+      uri: http://10.112.101.98:9000/
+      name: k8s-api-server

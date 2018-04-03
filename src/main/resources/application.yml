@@ -1,0 +1,16 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: k8s-api-server
+  zipkin:
+    base-url: http://10.112.101.98:9411
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://10.112.101.98:9001/eureka/
+    fetch-registry:
+      true
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${random.value}
